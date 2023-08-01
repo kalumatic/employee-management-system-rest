@@ -7,8 +7,8 @@ A simple REST API for performing CRUD operations on an employees database.
 
 ## Installation
 1. Clone the repository or download the ZIP file.
-2. Run the SQL script provided in the sql-script folder
-3. Execute the following in terminal to build and run the project
+2. Run the SQL script provided in the sql-script folder to use my table of employees.
+3. Execute the following in terminal to build and run the project.
 > ./mvnw clean install \
 > ./mvnw spring-boot:run
 
