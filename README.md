@@ -1,5 +1,5 @@
 # Employees REST API
-A simple REST API for performing CRUD operations on an employees database.
+A simple REST API for performing CRUD operations on an employees database. The API is built using Spring Boot, Hibernate/JPA and MySQL.
 
 ## Requirements
 * You need to have JDK 17 or greater installed.
@@ -14,8 +14,8 @@ A simple REST API for performing CRUD operations on an employees database.
 
 ## How to Use
 The API allows the following endpoints and methods:
-* "/api/employee" (POST method) - creates a new employee, using the parameters provided in the request
-* "/api/employee" (GET method) - returns the list of all employees
-* "/api/employee/{employeeId}" (GET method) - returns the employee with an id of {employeeId}
-* "/api/employee" (PUT method) - updates an existing employee, using the parameters provided in the request
-* "/api/employee/{employeeId}" - deletes an employee with an id of {employeeId}
+* "/api/employees" (POST method) - creates a new employee, using the parameters provided in the request
+* "/api/employees" (GET method) - returns the list of all employees
+* "/api/employees/{employeeId}" (GET method) - returns the employee with an id of {employeeId}
+* "/api/employees" (PUT method) - updates an existing employee, using the parameters provided in the request
+* "/api/employees/{employeeId}" - deletes an employee with an id of {employeeId}
