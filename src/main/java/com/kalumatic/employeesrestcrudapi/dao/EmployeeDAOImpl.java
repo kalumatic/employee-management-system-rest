@@ -24,4 +24,21 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
         return query.getResultList();
     }
+
+    @Override
+    public Employee findById(int id) {
+        return em.find(Employee.class, id);
+    }
+
+    @Override
+    public Employee save(Employee employee) {
+        // save or update the employee
+        return em.merge(employee);
+    }
+
+    @Override
+    public void deleteById(int id) {
+        // finds the employee by id, and then deletes them
+        em.remove(em.find(Employee.class, id));
+    }
 }

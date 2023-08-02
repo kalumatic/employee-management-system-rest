@@ -14,8 +14,8 @@ A simple REST API for performing CRUD operations on an employees database. The A
 
 ## How to Use
 The API allows the following endpoints and methods:
-* "/api/employees" (POST method) - creates a new employee, using the parameters provided in the request
 * "/api/employees" (GET method) - returns the list of all employees
 * "/api/employees/{employeeId}" (GET method) - returns the employee with an id of {employeeId}
+* "/api/employees" (POST method) - creates a new employee, using the parameters provided in the request
 * "/api/employees" (PUT method) - updates an existing employee, using the parameters provided in the request
 * "/api/employees/{employeeId}" - deletes an employee with an id of {employeeId}
