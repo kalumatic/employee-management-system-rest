@@ -1,6 +1,6 @@
 package com.kalumatic.employeesrestcrudapi.service;
 
-import com.kalumatic.employeesrestcrudapi.dao.EmployeeDAO;
+import com.kalumatic.employeesrestcrudapi.dao.EmployeeRepository;
 import com.kalumatic.employeesrestcrudapi.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,35 +11,33 @@ import java.util.List;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-    private EmployeeDAO employeeDAO;
+    private EmployeeRepository employeeRepository;
 
     @Autowired
-    public EmployeeServiceImpl(EmployeeDAO employeeDAO) {
-        this.employeeDAO = employeeDAO;
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
     }
 
     @Override
     public List<Employee> findAll() {
-        return employeeDAO.findAll();
+        return employeeRepository.findAll();
     }
 
 
     @Override
     public Employee findById(int id) {
-        return employeeDAO.findById(id);
+        return employeeRepository.findById(id).get();
     }
 
     @Override
-    @Transactional
     public Employee save(Employee employee) {
         // save or update the employee
-        return employeeDAO.save(employee);
+        return employeeRepository.save(employee);
     }
 
     @Override
-    @Transactional
     public void deleteById(int id) {
         // finds the employee by id, and then deletes them
-        employeeDAO.deleteById(id);
+        employeeRepository.deleteById(id);
     }
 }

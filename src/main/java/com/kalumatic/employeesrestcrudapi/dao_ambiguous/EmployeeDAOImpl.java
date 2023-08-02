@@ -1,4 +1,4 @@
-package com.kalumatic.employeesrestcrudapi.dao;
+package com.kalumatic.employeesrestcrudapi.dao_ambiguous;
 
 import com.kalumatic.employeesrestcrudapi.entity.Employee;
 import jakarta.persistence.EntityManager;
