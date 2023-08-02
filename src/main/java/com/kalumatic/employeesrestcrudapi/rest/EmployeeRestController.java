@@ -1,7 +1,7 @@
 package com.kalumatic.employeesrestcrudapi.rest;
 
-import com.kalumatic.employeesrestcrudapi.dao.EmployeeDAO;
 import com.kalumatic.employeesrestcrudapi.entity.Employee;
+import com.kalumatic.employeesrestcrudapi.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,18 +13,18 @@ import java.util.List;
 @RequestMapping("/api")
 public class EmployeeRestController {
 
-    private EmployeeDAO employeeDAO;
+    private EmployeeService employeeService;
 
-    // constructor injection to inject employeeDAO
+    // constructor injection to inject employeeService
     @Autowired
-    public EmployeeRestController(EmployeeDAO employeeDAO) {
-        this.employeeDAO = employeeDAO;
+    public EmployeeRestController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
     }
 
     // returns the list of all employees
     // endpoint "/api/employees"
     @GetMapping("/employees")
     public List<Employee> findAll() {
-        return employeeDAO.findAll();
+        return employeeService.findAll();
     }
 }
