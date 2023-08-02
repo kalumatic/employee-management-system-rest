@@ -40,4 +40,11 @@ public class EmployeeRestController {
         employee.setId(0);
         return employeeService.save(employee);
     }
+
+    // updates an employee
+    // endpoint "/api/employees"
+    @PutMapping("/employees")
+    public Employee update(@RequestBody Employee employee) {
+        return employeeService.save(employee);
+    }
 }
