@@ -3,10 +3,7 @@ package com.kalumatic.employeesrestcrudapi.rest;
 import com.kalumatic.employeesrestcrudapi.entity.Employee;
 import com.kalumatic.employeesrestcrudapi.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,5 +31,13 @@ public class EmployeeRestController {
     @GetMapping("/employees/{employeeId}")
     public Employee findById(@PathVariable("employeeId") int employeeId) {
         return employeeService.findById(employeeId);
+    }
+
+    // creates and saves a new employee
+    // endpoint "/api/employees"
+    @PostMapping("/employees")
+    public Employee add(@RequestBody Employee employee) {
+        employee.setId(0);
+        return employeeService.save(employee);
     }
 }
