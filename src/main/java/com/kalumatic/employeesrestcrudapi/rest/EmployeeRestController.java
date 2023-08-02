@@ -47,4 +47,11 @@ public class EmployeeRestController {
     public Employee update(@RequestBody Employee employee) {
         return employeeService.save(employee);
     }
+
+    // delete the employee with the provided id
+    // endpoint "/api/employees/{employeeId}
+    @DeleteMapping("/employees/{employeeId}")
+    public void delete(@PathVariable int employeeId) {
+        employeeService.deleteById(employeeId);
+    }
 }
