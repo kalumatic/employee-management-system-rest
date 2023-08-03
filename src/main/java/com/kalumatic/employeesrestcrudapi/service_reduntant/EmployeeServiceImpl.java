@@ -1,10 +1,9 @@
-package com.kalumatic.employeesrestcrudapi.service;
+package com.kalumatic.employeesrestcrudapi.service_reduntant;
 
 import com.kalumatic.employeesrestcrudapi.dao.EmployeeRepository;
 import com.kalumatic.employeesrestcrudapi.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
