@@ -19,3 +19,12 @@ The API allows the following endpoints and methods:
 * "/api/employees" (POST method) - creates a new employee, using the parameters provided in the request
 * "/api/employees" (PUT method) - updates an existing employee, using the parameters provided in the request
 * "/api/employees/{employeeId}" - deletes an employee with an id of {employeeId}
+
+### Authentication and Authorization
+There are three default users: kalu, nikola, lazar.
+Their authentication info and roles are in class SecurityConfig.
+
+There are three roles: EMPLOYEE, MANAGER, ADMIN.
+* EMPLOYEE - can use first two endpoints
+* MANAGER - can use second two endpoints
+* ADMIN - can use last endpoint
