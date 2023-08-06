@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
     username varchar(50) NOT NULL,
-    password varchar(50) NOT NULL,
+    password char(68) NOT NULL,
     enabled tinyint NOT NULL,
 
     PRIMARY KEY (username)
@@ -13,9 +13,9 @@ CREATE TABLE users (
 
 INSERT INTO users
 VALUES
-    ('kalu', '{noop}password', 1),
-    ('nikola', '{noop}password', 1),
-    ('lazar', '{noop}password', 1);
+    ('kalu', '{bcrypt}$2a$10$M8ZDKkz0EEh/1QV5hCRe2.TVxTnLHqTNo.dWygbt57pwlJRkGg/7a', 1),
+    ('nikola', '{bcrypt}$2a$10$M8ZDKkz0EEh/1QV5hCRe2.TVxTnLHqTNo.dWygbt57pwlJRkGg/7a', 1),
+    ('lazar', '{bcrypt}$2a$10$M8ZDKkz0EEh/1QV5hCRe2.TVxTnLHqTNo.dWygbt57pwlJRkGg/7a', 1);
 
 CREATE TABLE authorities (
     username varchar(50) NOT NULL,
