@@ -62,6 +62,14 @@ public class SecurityConfig {
     // adding support for JDBC - NO MORE HARDCODED USERS
     @Bean
     public UserDetailsManager userDetailsManager(DataSource dataSource) {
-        return new JdbcUserDetailsManager(dataSource);
+        JdbcUserDetailsManager jdbcUserDetailsManager =  new JdbcUserDetailsManager(dataSource);
+
+        // defines query to retrieve a user by username
+        jdbcUserDetailsManager.setUsersByUsernameQuery("SELECT * FROM members WHERE user_id=?");
+
+        // defines query to retrieve the authorities/roles by username
+        jdbcUserDetailsManager.setAuthoritiesByUsernameQuery("SELECT * FROM roles WHERE user_id=?");
+
+        return jdbcUserDetailsManager;
     }
 }

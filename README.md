@@ -28,3 +28,5 @@ There are three roles: EMPLOYEE, MANAGER, ADMIN.
 * EMPLOYEE - can use first two endpoints
 * MANAGER - can use second two endpoints
 * ADMIN - can use last endpoint
+
+Default password for every user is "password", but the database stores an encrypted version using bcrypt algorithm.

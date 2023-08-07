@@ -1,4 +1,4 @@
-package com.kalumatic.employeesrestcrudapi.rest_redundant;
+package com.kalumatic.employeesrestcrudapi.rest;
 
 import com.kalumatic.employeesrestcrudapi.entity.Employee;
 import com.kalumatic.employeesrestcrudapi.service_reduntant.EmployeeService;
