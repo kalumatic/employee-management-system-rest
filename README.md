@@ -1,4 +1,4 @@
-# Employees Management System
+# EmployeeManagement System
 
 A simple REST API for performing CRUD operations on an employees database. The API is built using Spring Boot, Hibernate/JPA, and MySQL.
 
